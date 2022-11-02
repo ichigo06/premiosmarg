@@ -45,7 +45,7 @@ class SalesController extends Controller
         request()->validate([
             'id_consumers_sales' => 'required',
             'id_users_sales' => 'required',
-            'create_at' => 'required',
+            'created_at' => 'required',
             'venta' => 'required',
         ]);
 

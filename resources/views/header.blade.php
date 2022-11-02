@@ -27,14 +27,14 @@
                         <li class="nav__content__list__item"><a href="{{ url('consumers') }}"><i class="fa-duotone fa fa-users"></i>Lista de clientes</a></li>
                         <li class="nav__content__list__item option__title">Usuarios Marg</li>
                         <li class="nav__content__list__item"><a href="{{ url('users/create') }}"><i class="fa-solid fa-user"></i>Agregar usuario</a></li>
-                        <li class="nav__content__list__item"><a href="{{ url('objective/create') }}"><i class="fa-solid fa-user"></i>Objetivo del usuario</a></li>
+                        <li class="nav__content__list__item"><a href="{{ url('objective/create') }}"><i class="fa-solid fa-user"></i>Agregar Objetivo</a></li>
                         <li class="nav__content__list__item"><a href="{{ url('users') }}"><i class="fa-duotone fa fa-users"></i>Lista de usuarios</a></li>
                         <li class="nav__content__list__item"><a href="{{ url('objective') }}"><i class="fa-duotone fa fa-users"></i>Lista de objetivos</a></li>
                         <li class="nav__content__list__item option__title">Ventas Marg</li>
                         <li class="nav__content__list__item"><a href="{{ url('sales/create') }}"><i class="fa-solid fa-box"></i>Agregar ventas marg</a></li>
                         <li class="nav__content__list__item"><a href="{{ url('sales') }}"><i class="fa-solid fa-boxes-stacked"></i>Lista de ventas marg</a></li>
                         <li class="nav__content__list__item option__title">Objetivos</li>
-                        <li class="nav__content__list__item"><a href="{{ url('seller') }}"><i class="fa-solid fa-box"></i>Objetivos de los usuarios</a></li>
+                        <li class="nav__content__list__item"><a href="{{ url('seller') }}"><i class="fa-solid fa-box"></i>Avances de ventas</a></li>
                         @endrole
                         @role('Vendedor')
                         <li class="nav__content__list__item option__title">Tus objetivos</li>

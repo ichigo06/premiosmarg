@@ -61,15 +61,14 @@
                             <input   wire:ignore id="typeclient2"  name="" value="1" type="hidden">
                             <select  wire:model ="selectedRuc" class="select2 form-control"  id="selectedCustomers">
                                 <option value="0">Seleccionar cliente MARG</option>
-                            @foreach($users as $user)
-                                <option value="{{ $user->id }}">{{ $user->name }}</option>
+                            @foreach($consumers as $consumer)
+                                <option value="{{ $consumer->id }}">{{ $consumer->cliente }}</option>
                             @endforeach 
                             </select>
                         </div>
                         <div class="date_information pt-4">
                             @foreach($ruc as $item)
-                            <strong>Cliente:<strong><span>  {{ $item->consumers->cliente }} <br>
-                            <strong>Ruc:<strong><span>  {{ $item->consumers->ruc }} <br>
+                            <strong>Cliente:<strong><span>  {{ $item->name }} <br>
                             <strong>DNI:<strong> <span>  {{ $item->dni }} </span> <br>
                             @endforeach
                             <strong>Ingresos:<strong><span>  {{ $venta }} <br>

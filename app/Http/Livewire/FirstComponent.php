@@ -34,7 +34,7 @@ class FirstComponent extends Component
     public $fechaFiltro;
 
     public function mount() {
-        $this ->  users = User::orderby('name')->get();
+        $this ->  consumers = Consumer::orderby('cliente')->get();
         $this -> month = Carbon::now()->format('2022-01');
         $this -> month2 = Carbon::now()->format('2022-02');
         $this -> month3 = Carbon::now()->format('2022-03');
@@ -50,7 +50,7 @@ class FirstComponent extends Component
     }
     public function updatedSelectedRuc() {
         if($this->selectedRuc != '') {
-            $this -> ruc = User::where('id' , $this->selectedRuc)->get();
+            $this -> ruc = User::where('id_consumers' , $this->selectedRuc)->get();
             $this -> venta = Sales::where('id_users_sales' , $this->selectedRuc)->whereBetween('created_at', [ Carbon::now()->startOfMonth() , Carbon::now()->endOfMonth() -> toDateString()])->sum('venta');
             $this -> objective = Objective::where('id_objective' , $this->selectedRuc)->whereBetween('created_at', [ Carbon::now()->startOfMonth() , Carbon::now()->endOfMonth() -> toDateString()])->sum('objective');
         } else {
