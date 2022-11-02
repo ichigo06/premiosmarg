@@ -119,6 +119,6 @@ class UserController extends Controller
     {
         User::destroy($id);
 
-        return redirect('admin.users');
+        return redirect('users');
     }
 }
