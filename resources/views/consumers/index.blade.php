@@ -11,6 +11,7 @@
                         <th>Cliente</th>
                         <th>Ruc</th>
                         <th>Distrito</th>
+                        <th>Zona</th>
                         <th>Region</th>
                         <th>Zona</th>
                         <th>Accion Editar</th>
@@ -25,6 +26,7 @@
                         <td>{{ $consumer->cliente }}</td>
                         <td>{{ $consumer->ruc }}</td>
                         <td>{{ $consumer->distrito }}</td>
+                        <td>{{ $consumer->zona }}</td>
                         <td>{{ $consumer->region }}</td>
                         <td>{{ $consumer->zona }}</td>
                         <td>
