@@ -70,9 +70,9 @@
                             @foreach($ruc as $item)
                             <strong>Cliente:<strong><span>  {{ $item->name }} <br>
                             <strong>DNI:<strong> <span>  {{ $item->dni }} </span> <br>
-                            @endforeach
-                            <strong>Ingresos:<strong><span>  {{ $venta }} <br>
+                            <strong>Ingresos:<strong><span>  {{ $item->sales->venta }} <br>
                             <strong>Objetivo:<strong><span>  {{ $objective }} <br>
+                            @endforeach
                         </div>
                     </div>
                 </div>         
