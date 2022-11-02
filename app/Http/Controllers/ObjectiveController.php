@@ -44,7 +44,6 @@ class ObjectiveController extends Controller
 
         request()->validate([
             'objective' => 'required',
-            'create_at' => 'required',
             'id_objective' => 'required',
         ]);
 
