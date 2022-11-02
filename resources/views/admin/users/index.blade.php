@@ -35,7 +35,7 @@
                             </a>
                         </td>
                         <td>
-                            <form action="{{ url('/admin/'.$user->id) }}" method="post">
+                            <form action="{{ url('/users/'.$user->id) }}" method="post">
                                 {{ csrf_field( )}}
                                 {{ method_field('DELETE') }}
                                 <button class="button-td" type="submit" onclick="return confirm('¿ Borrar ?');">Borrar</button>
