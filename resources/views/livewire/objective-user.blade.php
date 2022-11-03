@@ -15,17 +15,19 @@
         @if(!is_null($users))
         <div class="pb-3"> 
                 @foreach($users as $user)
-                    <div>
-                       <p class="m-0">{{ $user->consumers->cliente }}</p>
-                    </div>
-                    <div>
-                        <input type="hidden" value="{{ $user->id }}" name="id_objective[]">{{ $user->name }}
-                    </div>
-                    <div>
-                        @if($errors->has('objective'))
-                            <span class="error text-danger">{{$errors->first('id_objective') }}</span>
-                        @endif  
-                        <input type="text" name="objective[]" placeholder="Objetivo del usuario" value=""> 
+                    <div class="line-before">
+                        <div>
+                        <p class="m-0">{{ $user->consumers->cliente }}</p>
+                        </div>
+                        <div>
+                            <input type="hidden" value="{{ $user->id }}" name="id_objective[]">{{ $user->name }}
+                        </div>
+                        <div>
+                            @if($errors->has('objective'))
+                                <span class="error text-danger">{{$errors->first('id_objective') }}</span>
+                            @endif  
+                            <input type="text" name="objective[]" placeholder="Objetivo del usuario" value=""> 
+                        </div>
                     </div>
                 @endforeach
             @endif
@@ -47,6 +49,18 @@
                 padding: 20px;
                 width: 100%;
                 justify-content: center;
+            }
+            .line-before {
+                position: relative;
+                margin-bottom: 20px;
+            }
+            .line-before::before { 
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 96%;
+                background: #2A81B4;
+                padding: 2px;
             }
         </style>
 </div>

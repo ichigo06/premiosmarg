@@ -19,26 +19,28 @@
                     <input type="date" class="date-picker-official">
                 </div>
                 @foreach($users as $user)
-                    @if($errors->has('id_consumers_sales'))
-                        <span class="error text-danger">{{$errors->first('id_consumers_sales') }}</span>
-                    @endif
-                    <div>
-                        <input   type="hidden" name="id_consumers_sales[]" value="{{ $user->id_consumers }}">{{ $user->consumers->cliente }}
-                    </div>
-                    <div>
-                        <input type="hidden" value="{{ $user->id }}" name="id_users_sales[]">{{ $user->name }}
-                    @if($errors->has('create_at'))
-                        <span class="error text-danger">{{$errors->first('create_at') }}</span>
-                    @endif 
-                    </div>
-                    <div>
-                        <input type="date" class="date-picker" name="created_at[]">
-                    </div>
-                    <div>
-                        @if($errors->has('venta'))
-                            <span class="error text-danger">{{$errors->first('venta') }}</span>
-                        @endif  
-                        <input type="text" name="venta[]" placeholder="Venta del usuario" value=""> 
+                    <div class="line-before">
+                        @if($errors->has('id_consumers_sales'))
+                            <span class="error text-danger">{{$errors->first('id_consumers_sales') }}</span>
+                        @endif
+                        <div>
+                            <input   type="hidden" name="id_consumers_sales[]" value="{{ $user->id_consumers }}">{{ $user->consumers->cliente }}
+                        </div>
+                        <div>
+                            <input type="hidden" value="{{ $user->id }}" name="id_users_sales[]">{{ $user->name }}
+                        @if($errors->has('create_at'))
+                            <span class="error text-danger">{{$errors->first('create_at') }}</span>
+                        @endif 
+                        </div>
+                        <div>
+                            <input type="hidden" class="date-picker" name="created_at[]">
+                        </div>
+                        <div>
+                            @if($errors->has('venta'))
+                                <span class="error text-danger">{{$errors->first('venta') }}</span>
+                            @endif  
+                            <input type="text" name="venta[]" placeholder="Venta del usuario" value=""> 
+                        </div>
                     </div>
                 @endforeach
             @endif
@@ -60,6 +62,18 @@
                 padding: 20px;
                 width: 100%;
                 justify-content: center;
+            }
+            .line-before {
+                position: relative;
+                margin-bottom: 20px;
+            }
+            .line-before::before { 
+                content: "";
+                position: absolute;
+                bottom: 0;
+                width: 96%;
+                background: #2A81B4;
+                padding: 2px;
             }
         </style>
 </div>

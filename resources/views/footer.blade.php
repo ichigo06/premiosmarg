@@ -152,6 +152,15 @@ $(function(){
     });
 });
 
+
+$(function(){
+  	$(document).on('change','.date-picker-official',function(){ //detectamos el evento change
+    	var value = $(this).val();//sacamos el valor del select
+      $('.date-picker').val(value);//le agregamos el valor al input (notese que el input debe tener un ID para que le caiga el valor)
+    });
+});
+
+
 let buttongenerate = document.querySelector('#sendText');
 
 if(buttongenerate) {

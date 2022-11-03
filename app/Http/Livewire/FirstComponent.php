@@ -51,8 +51,6 @@ class FirstComponent extends Component
     public function updatedSelectedRuc() {
         if($this->selectedRuc != '') {
             $this -> ruc = User::where('id_consumers' , $this->selectedRuc)->get();
-            $this -> venta = Sales::where('id_users_sales' , $this->selectedRuc)->whereBetween('created_at', [ Carbon::now()->startOfMonth() , Carbon::now()->endOfMonth() -> toDateString()])->sum('venta');
-            $this -> objective = Objective::where('id_objective' , $this->selectedRuc)->whereBetween('created_at', [ Carbon::now()->startOfMonth() , Carbon::now()->endOfMonth() -> toDateString()])->sum('objective');
         } else {
             $this->ruc = [];
             $this->venta = [];

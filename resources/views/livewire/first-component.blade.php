@@ -68,10 +68,26 @@
                         </div>
                         <div class="date_information pt-4">
                             @foreach($ruc as $item)
-                            <strong>Cliente:<strong><span>  {{ $item->name }} <br>
-                            <strong>DNI:<strong> <span>  {{ $item->dni }} </span> <br>
-                            <strong>Ingresos:<strong><span>  {{ $item->sales->venta }} <br>
-                            <strong>Objetivo:<strong><span>  {{ $objective }} <br>
+                            <div class="line-before">
+                                @php
+                                    $suma = 0;
+                                    $suma2 =  0;
+                                @endphp
+                                <strong>Cliente:<strong><span>  {{ $item->name }} <br>
+                                <strong>DNI:<strong> <span>  {{ $item->dni }} </span> <br>
+                                    @foreach($item->sales as $items)
+                                    @php
+                                        $suma+=$items->venta;
+                                    @endphp 
+                                    @endforeach
+                                    @foreach($item->objective as $items)
+                                    @php
+                                        $suma2+=$items->objective;
+                                    @endphp 
+                                    @endforeach
+                                <strong>Ingresos:<strong><span>  {{ $suma }} <br>
+                                <strong>Objetivo:<strong><span>  {{ $suma2 }} <br>
+                            </div>
                             @endforeach
                         </div>
                     </div>
@@ -93,6 +109,19 @@
             padding: 20px;
             width: 100%;
             justify-content: center;
+        }
+        .line-before {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        .line-before::before { 
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            background: #2A81B4;
+            padding: 2px;
         }
     </style>
 </div>

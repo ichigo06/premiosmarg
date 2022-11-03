@@ -57,7 +57,11 @@ class User extends Authenticatable
     public function consumers() {
             return $this->belongsTo(Consumer::class, 'id_consumers');
     }
-    public function sales() {
-        return $this->belongsTo(Consumer::class, 'id_users_sales');
+    public function  sales() { 
+        return $this->hasMany(Sales::class, 'id_users_sales');
+    }
+
+    public function  objective() { 
+        return $this->hasMany(Objective::class, 'id_objective');
     }
 }
