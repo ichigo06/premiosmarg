@@ -9,6 +9,7 @@
                     <tr>
                         <th>#</th>
                         <th>Cliente</th>
+                        <th>Zona</th>
                         <th>Nombres y apellidos</th>
                         <th>Correo Electrónico</th>
                         <th>DNI</th>
@@ -24,6 +25,7 @@
                     <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $user->consumers->cliente }}</td>
+                        <td>{{ $user->consumers->zona }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->dni }}</td>
