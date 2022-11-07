@@ -15,8 +15,7 @@ class ConsumerController extends Controller
      */
     public function index()
     {
-        $consumers = DB::table('consumers')->orderBy('id' , 'DESC')->get();
-        return view('consumers.index' , compact('consumers'));
+        return view('consumers.index');
     }
 
     /**

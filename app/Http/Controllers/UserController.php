@@ -19,9 +19,8 @@ class UserController extends Controller
      */
     public function index(Request $request)
     {
-        $users = User::with('consumers')->orderBy('id' , 'DESC')->get();
-        $users = User::with('consumers')->orderBy('id' , 'DESC')->get();
-        return view('admin.users.index' , compact('users'));
+        // $users = User::with('consumers')->orderBy('id' , 'DESC')->get();
+        return view('admin.users.index');
     }
 
     /**
