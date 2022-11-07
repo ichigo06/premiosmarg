@@ -16,7 +16,7 @@ class Searchusers extends Component
             'users' => User::when($this->searchusers , function($query , $searchusers){
                 return $query->where('name' , 'LIKE' , "%$searchusers%")
                 ->orWhere('dni' , 'LIKE', "%$searchusers%");
-            })->orderby('id' , 'desc')->paginate(5)
+            })->orderby('id' , 'desc')->paginate(3)
         ]);
     }
 }

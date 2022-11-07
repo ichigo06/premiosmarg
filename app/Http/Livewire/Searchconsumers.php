@@ -18,7 +18,7 @@ class Searchconsumers extends Component
         return view('livewire.searchconsumers', [
             'consumers' => Consumer::when($this->searchusers , function($query , $searchusers){
                 return $query->where('cliente' , 'LIKE' , "%$searchusers%");
-            })->orderby('id' , 'desc')->paginate(5)
+            })->orderby('id' , 'desc')->paginate(3)
         ]);
     }
 }
