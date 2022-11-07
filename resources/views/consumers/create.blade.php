@@ -27,7 +27,7 @@
                     <span class="error text-danger">{{$errors->first('zona') }}</span>
                 @endif  
                 <input type="hidden" name="zona" placeholder="Zona" value="" id="zone"> 
-                <select name="" id="zone-select" class="w-100 mb-3">
+                <select name="" id="zone-select" class="mb-3">
                     <option value="No seleccionaste ninguna zona">Seleccionar zona</option>
                     <option value="Lima Norte">Lima Norte</option>
                     <option value="Lima Sur">Lima Sur</option>
@@ -40,7 +40,7 @@
                     <span class="error text-danger">{{$errors->first('region') }}</span>
                 @endif  
                 <input type="hidden" id="select-d" name="region"></input>
-                <select class="select-departament select2-departament w-100 departament select-departament-2" name="" id="departamentos" onchange="cambia_departamento()">
+                <select class="select-departament select2-departament  departament select-departament-2" name="" id="departamentos" onchange="cambia_departamento()">
                     <option value="0">Seleccione Departamentos</option>
                     <option value="Lima">Lima</option>
                     <option value="Amazonas">Amazonas</option>
