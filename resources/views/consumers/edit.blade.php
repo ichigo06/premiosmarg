@@ -19,6 +19,9 @@
                 <input type="text" name="distrito" placeholder="distrito" value="{{ $consumers->distrito }}"> 
             </div>
             <div>
+                <input type="text" name="zona" placeholder="zona" value="{{ $consumers->zona }}"> 
+            </div>
+            <div>
                 <input type="text" name="region" placeholder="Region" value="{{ $consumers->region }}"> 
             </div>
             <div>
