@@ -17,7 +17,12 @@ class Searchconsumers extends Component
     {
         return view('livewire.searchconsumers', [
             'consumers' => Consumer::when($this->searchusers , function($query , $searchusers){
-                return $query->where('cliente' , 'LIKE' , "%$searchusers%");
+                return $query->where('cliente' , 'LIKE' , "%$searchusers%")
+                ->orWhere('cliente' , 'LIKE', "%$searchusers%")
+                ->orWhere('ruc' , 'LIKE', "%$searchusers%")
+                ->orWhere('zona' , 'LIKE', "%$searchusers%")
+                ->orWhere('region' , 'LIKE', "%$searchusers%")
+                ->orWhere('distrito' , 'LIKE', "%$searchusers%");
             })->orderby('id' , 'desc')->paginate(5)
         ]);
     }

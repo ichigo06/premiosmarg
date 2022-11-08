@@ -9,7 +9,6 @@
                         <th>Distrito</th>
                         <th>Zona</th>
                         <th>Region</th>
-                        <th>Zona</th>
                         <th>Accion Editar</th>
                         <th>Accion Borrar</th>  
                     </tr>
@@ -24,7 +23,6 @@
                         <td>{{ $consumer->distrito }}</td>
                         <td>{{ $consumer->zona }}</td>
                         <td>{{ $consumer->region }}</td>
-                        <td>{{ $consumer->zona }}</td>
                         <td>
                             <a class="button-td" href="{{ url('/consumers/'.$consumer->id.'/edit') }}">
                                 Editar
