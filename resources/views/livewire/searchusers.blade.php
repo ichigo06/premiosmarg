@@ -20,8 +20,8 @@
                 @foreach($users as $user)
                 <tr>
                     <td>{{ $loop->iteration }}</td>
-                    <td>{{ $user->consumers->cliente }}</td>
-                    <td>{{ $user->consumers->zona }}</td>
+                    <td>{{ $user->cliente }}</td>
+                    <td>{{ $user->zona }}</td>
                     <td>{{ $user->name }}</td>
                     <td>{{ $user->email }}</td>
                     <td>{{ $user->dni }}</td>

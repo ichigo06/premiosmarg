@@ -55,7 +55,7 @@ class User extends Authenticatable
      * @var array
      */
     public function consumers() {
-            return $this->belongsTo(Consumer::class, 'id_consumers');
+            return $this->belongsTo(Consumer::class, 'id_consumers' , 'id');
     }
     public function  sales() { 
         return $this->hasMany(Sales::class, 'id_users_sales');
